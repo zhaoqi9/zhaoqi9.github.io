@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>空气给予者的博客</title>
   
-  <subtitle>zhaoqi</subtitle>
+  <subtitle>我的测试</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
@@ -10,7 +10,7 @@
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>zhaoqi</name>
+    <name>空气给予者</name>
     
   </author>
   
