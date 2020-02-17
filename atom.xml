@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-14T12:31:46.105Z</updated>
+  <updated>2020-02-17T08:12:47.248Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,155 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo设置</title>
+    <link href="http://yoursite.com/post/3d2a4a4b.html"/>
+    <id>http://yoursite.com/post/3d2a4a4b.html</id>
+    <published>2020-02-16T16:09:56.000Z</published>
+    <updated>2020-02-17T08:12:47.248Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>引言：</strong>本文介绍Hexo的详细设置方法。</p><a id="more"></a><h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h3><p>安装主题：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd &lt;博客目录&gt;</span><br><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure><p>打开hexo配置文件_config.yml找到theme部分，修改成如下方式即可启用next主题：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure><p>打开主题配置文件themes/next/_config.yml找到Scheme Settings部分：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure><blockquote><p>按照个人喜好去掉scheme前面的#号以启用对应的主题。</p></blockquote><h3 id="信息配置"><a href="#信息配置" class="headerlink" title="信息配置"></a>信息配置</h3><p>打开hexo的配置文件_config.yml找到Site部分：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Hexo Configuration</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;configuration.html</span><br><span class="line">## Source: https:&#x2F;&#x2F;github.com&#x2F;hexojs&#x2F;hexo&#x2F;</span><br><span class="line"></span><br><span class="line"># Site</span><br><span class="line">title: 空气给予者的博客  #网站标题</span><br><span class="line">subtitle: &#39;zhaoqi&#39;  #网站副标题</span><br><span class="line">description: &#39;原创技术分享&#39;  #网站描述</span><br><span class="line">keywords:   #网站关键字</span><br><span class="line">author: zhaoqi  #作者</span><br><span class="line">language: zh-CN  #语言</span><br><span class="line">timezone: &#39;Asia&#x2F;Shanghai&#39;  #时区</span><br></pre></td></tr></table></figure><blockquote><p>可以查看theme/next/languages目录中是否有zh-CN.yml文件，网上很多教程将language设置为zh-Hans，但是此目录中没有zh-Hans.yml文件，也可以将zh-CN.yml复制为zh-Hans.yml</p></blockquote><h3 id="添加RSS"><a href="#添加RSS" class="headerlink" title="添加RSS"></a>添加RSS</h3><p>在博客根目录中安装插件：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-feed</span><br></pre></td></tr></table></figure><p>编辑博客根目录中的_config.yml文件，添加如下内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">plugins:</span><br><span class="line">    hexo-generator-feed</span><br><span class="line">#Feed Atom</span><br><span class="line">feed:</span><br><span class="line">    type: atom</span><br><span class="line">    path: &#x2F;atom.xml</span><br><span class="line">    limit: 20</span><br></pre></td></tr></table></figure><h3 id="修改页脚"><a href="#修改页脚" class="headerlink" title="修改页脚"></a>修改页脚</h3><p>打开主题配置文件themes/next/_config.yml找到footer部分：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">powered:</span><br><span class="line">  # 是否显示“由 Hexo 强力驱动“</span><br><span class="line">  enable: true</span><br><span class="line">  # 是否显示Hexo版本</span><br><span class="line">  version: true</span><br><span class="line"></span><br><span class="line">theme:</span><br><span class="line">  # 是否显示“主题 - NexT.Pisces”</span><br><span class="line">  enable: true</span><br><span class="line">  # 是否显示版本</span><br><span class="line">  version: true</span><br></pre></td></tr></table></figure><blockquote><p>建议将两个信息的版本去掉。</p></blockquote><h3 id="添加分类"><a href="#添加分类" class="headerlink" title="添加分类"></a>添加分类</h3><p>创建页面：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure><p>编辑新创建的页面source/categories/index.md</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2020-02-15 20:23:53</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: &quot;false&quot;</span><br></pre></td></tr></table></figure><blockquote><p>title可以改为汉字</p></blockquote><p>编辑主题配置文件themes/next/_config.yml，找到menu部分，去掉categories那行的#号：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">menu:  </span><br><span class="line">  home: &#x2F; || home</span><br><span class="line">  categories: &#x2F;categories&#x2F; || th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || archive</span><br><span class="line">  #tags: &#x2F;tags&#x2F; || tags</span><br></pre></td></tr></table></figure><h3 id="添加标签"><a href="#添加标签" class="headerlink" title="添加标签"></a>添加标签</h3><p>创建页面：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure><p>编辑新创建的页面source/tags/index.md</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2020-02-16 12:01:51</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br></pre></td></tr></table></figure><p>编辑主题配置文件themes/next/_config.yml，找到menu部分，去掉tags那行的#号：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">menu:  </span><br><span class="line">  home: &#x2F; || home</span><br><span class="line">  categories: &#x2F;categories&#x2F; || th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || archive</span><br><span class="line">  tags: &#x2F;tags&#x2F; || tags</span><br></pre></td></tr></table></figure><h3 id="文章分类"><a href="#文章分类" class="headerlink" title="文章分类"></a>文章分类</h3><p><strong>子分类：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">categories:</span><br><span class="line">  - Java</span><br><span class="line">  - Servlet</span><br><span class="line"></span><br><span class="line">或者：</span><br><span class="line">categories: [Java, Servlet]</span><br></pre></td></tr></table></figure><p><strong>多分类：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">categories:</span><br><span class="line">  -[Java]</span><br><span class="line">  -[Python]</span><br></pre></td></tr></table></figure><p>如果多分类中包含子分类：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">categories:</span><br><span class="line">  -[Java, Servlet]</span><br><span class="line">  -[Python]</span><br></pre></td></tr></table></figure><h3 id="写作模板"><a href="#写作模板" class="headerlink" title="写作模板"></a>写作模板</h3><blockquote><p>当我们执行hexo new “文章标题”的时候，其实就是利用scaffolds/post.md模板文件创建在source/_post/文章标题.md文件。</p></blockquote><p>编辑写作模板文件scaffolds/post.md</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">categories: []</span><br><span class="line">tags: []</span><br><span class="line"></span><br><span class="line">**引言:**</span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure><h3 id="修改社交信息"><a href="#修改社交信息" class="headerlink" title="修改社交信息"></a>修改社交信息</h3><p>打开主题配置文件themes/next/_config.yml找到social部分：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">social:</span><br><span class="line">  GitHub: https:&#x2F;&#x2F;github.com&#x2F;zhaoqi9 || github</span><br><span class="line">  E-Mail: mailto:zhaoqi9@gmail.com || envelope</span><br><span class="line">  Weibo: https:&#x2F;&#x2F;weibo.com&#x2F;yourname || weibo</span><br></pre></td></tr></table></figure><blockquote><p>按照自己的需要将左侧的#去掉。如果增加一些其他的社交信息，可以通过<a href="http://fontawesome.dashgame.com/" target="_blank" rel="noopener">FontAwesome</a>来查找想要设置的图标，并复制此名称到对应的社交信息的||后，例如，修改GitHub图标为spinner：</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">social:</span><br><span class="line">  GitHub: https:&#x2F;&#x2F;github.com&#x2F;zhaoqi9 || spinner</span><br></pre></td></tr></table></figure><h3 id="增加头像"><a href="#增加头像" class="headerlink" title="增加头像"></a>增加头像</h3><p>打开主题配置文件themes/next/_config.yml找到Sidebar Avatar部分：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">avatar:</span><br><span class="line">  url: &#x2F;images&#x2F;zq.jpg</span><br></pre></td></tr></table></figure><blockquote><p>现在source目录中创建images目录，再将个人头像上传至此目录中。</p></blockquote><h3 id="设置网站的图标Favicon"><a href="#设置网站的图标Favicon" class="headerlink" title="设置网站的图标Favicon"></a>设置网站的图标Favicon</h3><p>去别的网站下载或者制作（32*32）的ico图标（可以在<a href="https://www.easyicon.net/" target="_blank" rel="noopener">EasyIcon</a>中找一张），并将图标名称改为对应的名称，然后放在themes/next/source/images目录中，并且修改主题配置文件：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: &#x2F;images&#x2F;favicon-16x16-next.png</span><br><span class="line">  medium: &#x2F;images&#x2F;favicon-32x32-next.png</span><br><span class="line">  apple_touch_icon: &#x2F;images&#x2F;apple-touch-icon-next.png</span><br><span class="line">  safari_pinned_tab: &#x2F;images&#x2F;logo.svg</span><br><span class="line">  #android_manifest: &#x2F;images&#x2F;manifest.json</span><br><span class="line">  #ms_browserconfig: &#x2F;images&#x2F;browserconfig.xml</span><br></pre></td></tr></table></figure><h3 id="添加友情链接"><a href="#添加友情链接" class="headerlink" title="添加友情链接"></a>添加友情链接</h3><p>打开主题配置文件themes/next/_config.yml找到links部分：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">links:</span><br><span class="line">  #Title: http:&#x2F;&#x2F;yoursite.com</span><br><span class="line">  Baidu: https:&#x2F;&#x2F;www.baidu.com</span><br><span class="line">  Github: https:&#x2F;&#x2F;github.com</span><br></pre></td></tr></table></figure><h3 id="添加字数统计和阅读时长统计"><a href="#添加字数统计和阅读时长统计" class="headerlink" title="添加字数统计和阅读时长统计"></a>添加字数统计和阅读时长统计</h3><p>进入博客根目录安装插件：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure><p>打开hexo的配置文件_config.yml添加以下代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true</span><br><span class="line">  time: true</span><br><span class="line">  total_symbols: true</span><br><span class="line">  total_time: true</span><br></pre></td></tr></table></figure><p>打开主题配置文件themes/next/_config.yml找到symbols_count_time部分：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: true</span><br><span class="line">  item_text_post: true</span><br><span class="line">  item_text_total: false</span><br><span class="line">  awl: 4</span><br><span class="line">  wpm: 275</span><br></pre></td></tr></table></figure><p>重启服务</p><h3 id="修改文章中的标签样式"><a href="#修改文章中的标签样式" class="headerlink" title="修改文章中的标签样式"></a>修改文章中的标签样式</h3><p>打开主题配置文件themes/next/_config.yml找到tag_icon部分：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tag_icon: true</span><br></pre></td></tr></table></figure><h3 id="插入公式"><a href="#插入公式" class="headerlink" title="插入公式"></a>插入公式</h3><p>确保主题配置文件themes/next/_config.yml中的mathjax部分enable是true，在新建的文章中加入mathjax: true：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: 欧拉公式</span><br><span class="line">date: 2020-02-15 20:52:46</span><br><span class="line">mathjax: true</span><br><span class="line">categories: 数学</span><br><span class="line">tags: [欧拉,数学]</span><br></pre></td></tr></table></figure><blockquote><p>很多人插入公式遇到两个问题：</p><ol><li>在markdown中_代表斜体，和mathjax中定义的下标冲突，实测没有此问题；</li><li>在markdown中\代表\，和mathjax中的方程组冲突，实测只需\\解决此问题。</li></ol></blockquote><h3 id="链接优化"><a href="#链接优化" class="headerlink" title="链接优化"></a>链接优化</h3><p>hexo默认的连接方式是：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title.html</span><br></pre></td></tr></table></figure><blockquote><p>我认为有一些缺点，title部分是从创建文档的文件名中获取，如果我们定义的文件名是中文，那么这个链接也是中文，不利于传播。如果采用:id.html方式，链接名也是一个非常长的随机字符串，并且每次更新都会改变，这也不利于传播和搜索引擎的收录。<br>采用abbrlink插件实现URL优化：<br>安装插件：</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure><p>编辑博客的配置文件_config.yml</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">permalink: post&#x2F;:abbrlink.html # 生成唯一链接</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32 # 算法：crc16(default) and crc32</span><br><span class="line">  rep: hex # 进制：dec(default) and hex</span><br></pre></td></tr></table></figure><blockquote><p>执行hexo g的时候实际生成随机字符的链接名，并且以后也不会改变，其实在每篇文章头中加入了<u>abbrlink: 随机字符串</u>。如果想自己固定链接名，则在文章中指定<u>abbrlink: 自定义名称</u>。建议采用crc32和hex方式。</p></blockquote><p>分类和标签汉字URL优化<br>文章分类或标签可能会用到中文或其他字符，出于URL优化的考虑，又在尽量避免中文字符出现在URL中，所以需要对中文的分类和标签进行映射。编辑站点配置文件_config.yml：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#分类名映射</span><br><span class="line">category_map:  </span><br><span class="line">  生活: life</span><br><span class="line">  其他: other</span><br><span class="line">#标签名映射</span><br><span class="line">tag_map:  </span><br><span class="line">  生活: life</span><br><span class="line">  其他: other</span><br></pre></td></tr></table></figure><h3 id="生成站点地图"><a href="#生成站点地图" class="headerlink" title="生成站点地图"></a>生成站点地图</h3><p>安装插件：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#传统的sitemap</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">#百度的sitemap</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure><p>编辑博客的配置文件_config.yml，在末尾添加以下内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#生成传统的sitemap</span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">#生成百度的sitemap</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure><blockquote><p>注意：可以不用在_config.yml中添加上述内容。</p></blockquote><h3 id="主动推送搜索引擎"><a href="#主动推送搜索引擎" class="headerlink" title="主动推送搜索引擎"></a>主动推送搜索引擎</h3><p>next主题本身继承了自动推送功能，编辑themes/next/_config.yml：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">baidu_push: true</span><br></pre></td></tr></table></figure><h3 id="增加菜单"><a href="#增加菜单" class="headerlink" title="增加菜单"></a>增加菜单</h3><p>在主题配置文件themes/next/_config.yml中的menu部分增加自定义的内容，例如增加了resources：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  resources: &#x2F;resources&#x2F; || database</span><br></pre></td></tr></table></figure><blockquote><p>代码中的|| database是页面图标，图标名称来自<a href="http://fontawesome.dashgame.com/" target="_blank" rel="noopener">FontAwesome</a>，如果没有配置图标名称，则显示问号。</p></blockquote><p>创建page：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page resources</span><br></pre></td></tr></table></figure><p>修改主题的语言文件themes/next/languages/zh-CN.yml：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  resources: 资源</span><br></pre></td></tr></table></figure><h3 id="添加搜索功能"><a href="#添加搜索功能" class="headerlink" title="添加搜索功能"></a>添加搜索功能</h3><p>安装本地搜索插件：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure><blockquote><p>安装之后会在站点的public目录中创建一个search.xml文件。</p></blockquote><p>在站点配置文件_config.yml中增加以下内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Search </span><br><span class="line">search:</span><br><span class="line">  path: .&#x2F;public&#x2F;search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure><blockquote><p>path：索引文件的路径，相对于站点根目录；<br>field：搜索范围，默认是 post，还可以选择 page、all，设置成 all 表示搜索所有页面；<br>limit：限制搜索的条目数。</p></blockquote><p>在主题配置文件themes/next/_config.yml中找到local_search部分，将enable改为true：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  trigger: auto</span><br><span class="line">  top_n_per_article: 1</span><br></pre></td></tr></table></figure><blockquote><p>top_n_per_article表示在每篇文章中显示的搜索结果数量，设成-1会显示每篇文章的所有搜索结果数量。</p></blockquote><p>参考：<br><a href="https://www.cnblogs.com/liziczh/p/9318665.html" target="_blank" rel="noopener">https://www.cnblogs.com/liziczh/p/9318665.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;引言：&lt;/strong&gt;本文介绍Hexo的详细设置方法。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test06</title>
+    <link href="http://yoursite.com/post/4a2d7add.html"/>
+    <id>http://yoursite.com/post/4a2d7add.html</id>
+    <published>2020-02-16T14:24:29.000Z</published>
+    <updated>2020-02-17T09:00:33.521Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>test06测试页面</p><a id="more"></a><div class="pdf" target="https://lihanghang.top/2018/05/30/论文研究笔记/test.pdf" height=""></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;test06测试页面&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="天文" scheme="http://yoursite.com/categories/astro/"/>
+    
+    
+      <category term="天文" scheme="http://yoursite.com/tags/astro/"/>
+    
+      <category term="星空" scheme="http://yoursite.com/tags/star-sky/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test05</title>
+    <link href="http://yoursite.com/post/d3242b67.html"/>
+    <id>http://yoursite.com/post/d3242b67.html</id>
+    <published>2020-02-16T12:59:26.000Z</published>
+    <updated>2020-02-16T13:09:51.320Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>test05测试</p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;test05测试&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="next" scheme="http://yoursite.com/tags/next/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test04</title>
+    <link href="http://yoursite.com/post/a4231bf1.html"/>
+    <id>http://yoursite.com/post/a4231bf1.html</id>
+    <published>2020-02-16T12:56:07.000Z</published>
+    <updated>2020-02-16T12:57:15.155Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>test04测试</p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;test04测试&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test03</title>
+    <link href="http://yoursite.com/post/3a478e52.html"/>
+    <id>http://yoursite.com/post/3a478e52.html</id>
+    <published>2020-02-16T05:15:10.000Z</published>
+    <updated>2020-02-16T13:09:40.408Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>引言:</strong><br>这是一篇用markdown语法写的文章。</p><a id="more"></a><h1 id="1-一级标题"><a href="#1-一级标题" class="headerlink" title="1 一级标题"></a>1 一级标题</h1><h2 id="1-1-二级标题"><a href="#1-1-二级标题" class="headerlink" title="1.1 二级标题"></a>1.1 二级标题</h2><h3 id="1-1-1-三级标题"><a href="#1-1-1-三级标题" class="headerlink" title="1.1.1 三级标题"></a>1.1.1 三级标题</h3><blockquote><p>文字引用</p></blockquote><p><code>ls -l | grep lib</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo off</span><br><span class="line">shutdown -h now</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;引言:&lt;/strong&gt;&lt;br&gt;这是一篇用markdown语法写的文章。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Better late then never.</title>
+    <link href="http://yoursite.com/post/3076ae72.html"/>
+    <id>http://yoursite.com/post/3076ae72.html</id>
+    <published>2020-02-15T12:52:46.000Z</published>
+    <updated>2020-02-16T13:10:36.515Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><h2 id="一、二级标题"><a href="#一、二级标题" class="headerlink" title="一、二级标题"></a>一、二级标题</h2><h3 id="1-1-三级标题"><a href="#1-1-三级标题" class="headerlink" title="1.1 三级标题"></a>1.1 三级标题</h3><blockquote><p>文字引用</p></blockquote><p><code>ls -l | grep lib</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo off</span><br><span class="line">shutdown -h now</span><br></pre></td></tr></table></figure><a id="more"></a><p>$ x^{2}+y^{2}=z^{2} $<br>$ e^{i\pi} + 1 = 0 $<br>\begin{array}{c} a_1x+b_1y=c_1z\\a_2x+b_2y=c_2z\end{array}</p><h2 id="分割线1"><a href="#分割线1" class="headerlink" title="分割线1"></a>分割线1</h2><p>分割线3</p><hr><ol><li>第一</li><li>第二</li><li>第三</li></ol><ul><li>第一</li><li>第二</li><li>第三</li></ul><ul><li>第一</li><li>第二</li><li>第三</li></ul><ul><li>第一</li><li>第二</li><li>第三</li></ul><table><thead><tr><th>id</th><th>username</th><th>password</th></tr></thead><tbody><tr><td>1</td><td>zhaoqi</td><td>123456</td></tr></tbody></table><p><a href="https://www.baidu.com" target="_blank" rel="noopener" title="百度链接">百度</a><br><a href="https://www.baidu.com" target="_blank" rel="noopener">https://www.baidu.com</a></p><p><img src="https://www.baidu.com/img/pcpad_20b426f0af2c7ce8fb79ee4200a0e13e.png" alt="赵琦" title="示例图片"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h1&gt;&lt;h2 id=&quot;一、二级标题&quot;&gt;&lt;a href=&quot;#一、二级标题&quot; class=&quot;headerlink&quot; title=&quot;一、二级标题&quot;&gt;&lt;/a&gt;一、二级标题&lt;/h2&gt;&lt;h3 id=&quot;1-1-三级标题&quot;&gt;&lt;a href=&quot;#1-1-三级标题&quot; class=&quot;headerlink&quot; title=&quot;1.1 三级标题&quot;&gt;&lt;/a&gt;1.1 三级标题&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;文字引用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;ls -l | grep lib&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;echo off&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;shutdown -h now&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="meth" scheme="http://yoursite.com/tags/meth/"/>
+    
+  </entry>
+  
+  <entry>
     <title>test01</title>
-    <link href="http://yoursite.com/2020/02/14/test01/"/>
-    <id>http://yoursite.com/2020/02/14/test01/</id>
+    <link href="http://yoursite.com/post/d449ef7e.html"/>
+    <id>http://yoursite.com/post/d449ef7e.html</id>
     <published>2020-02-14T12:31:08.000Z</published>
-    <updated>2020-02-14T12:31:46.105Z</updated>
+    <updated>2020-02-16T16:25:09.662Z</updated>
     
     <content type="html"><![CDATA[<p>##This is a Test.</p>]]></content>
     
@@ -41,10 +185,10 @@
   
   <entry>
     <title>Hello,World</title>
-    <link href="http://yoursite.com/2020/02/14/Hello-World/"/>
-    <id>http://yoursite.com/2020/02/14/Hello-World/</id>
+    <link href="http://yoursite.com/post/3dd5712d.html"/>
+    <id>http://yoursite.com/post/3dd5712d.html</id>
     <published>2020-02-14T12:03:14.000Z</published>
-    <updated>2020-02-14T12:06:12.074Z</updated>
+    <updated>2020-02-16T16:24:34.338Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
